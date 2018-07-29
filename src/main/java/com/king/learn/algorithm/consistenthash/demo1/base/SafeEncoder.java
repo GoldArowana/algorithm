@@ -2,9 +2,6 @@ package com.king.learn.algorithm.consistenthash.demo1.base;
 
 import java.io.UnsupportedEncodingException;
 
-/**
- * @author doujintong
- */
 public class SafeEncoder {
     public static byte[][] encodeMany(final String... strs) {
         byte[][] many = new byte[strs.length][];
@@ -16,10 +13,8 @@ public class SafeEncoder {
 
     public static byte[] encode(final String str) {
         try {
-            if (str == null) {
-            }
             return str.getBytes("utf-8");
-        } catch (UnsupportedEncodingException e) {
+        } catch (UnsupportedEncodingException ignored) {
         }
         return null;
     }
@@ -27,7 +22,7 @@ public class SafeEncoder {
     public static String encode(final byte[] data) {
         try {
             return new String(data, "utf-8");
-        } catch (UnsupportedEncodingException e) {
+        } catch (UnsupportedEncodingException ignored) {
         }
         return null;
     }

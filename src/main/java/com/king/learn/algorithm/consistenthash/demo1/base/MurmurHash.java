@@ -3,9 +3,6 @@ package com.king.learn.algorithm.consistenthash.demo1.base;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-/**
- * @author doujintong
- */
 public class MurmurHash implements Hashing {
     /**
      * Hashes bytes in an array.

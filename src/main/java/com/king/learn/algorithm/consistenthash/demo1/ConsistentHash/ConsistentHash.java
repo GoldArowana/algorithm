@@ -1,20 +1,11 @@
 package com.king.learn.algorithm.consistenthash.demo1.ConsistentHash;
 
-
 import com.king.learn.algorithm.consistenthash.demo1.base.Hashing;
 
 import java.util.Collection;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-/**
- * <p>
- * User: doujintong
- * <p>
- * Date: 2015年7月23日
- * <p>
- * Version: 1.0
- */
 public class ConsistentHash<T> {
     private final Hashing hash;
     private final int numberOfReplicas;
@@ -32,8 +23,6 @@ public class ConsistentHash<T> {
 
     /**
      * 增加真实机器节点
-     *
-     * @param node
      */
     public void add(T node) {
         for (int i = 0; i < this.numberOfReplicas; i++) {
@@ -43,8 +32,6 @@ public class ConsistentHash<T> {
 
     /**
      * 删除真实机器节点
-     *
-     * @param node
      */
     public void remove(T node) {
         for (int i = 0; i < this.numberOfReplicas; i++) {
@@ -54,9 +41,6 @@ public class ConsistentHash<T> {
 
     /**
      * 取得真实机器节点
-     *
-     * @param key
-     * @return
      */
     public T get(String key) {
         if (circle.isEmpty()) {
