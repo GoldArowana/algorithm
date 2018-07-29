@@ -97,8 +97,6 @@ public class SnowflakeIdWorker {
      */
     private long lastTimestamp = -1L;
 
-    //==============================Constructors=====================================
-
     /**
      * 构造函数
      *
@@ -114,20 +112,6 @@ public class SnowflakeIdWorker {
         }
         this.workerId = workerId;
         this.datacenterId = datacenterId;
-    }
-
-    // ==============================Methods==========================================
-
-    /**
-     * 测试
-     */
-    public static void main(String[] args) {
-        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 0);
-        for (int i = 0; i < 1000; i++) {
-            long id = idWorker.nextId();
-            System.out.println(Long.toBinaryString(id));
-            System.out.println(id);
-        }
     }
 
     /**
@@ -182,7 +166,6 @@ public class SnowflakeIdWorker {
         return timestamp;
     }
 
-    //==============================Test=============================================
 
     /**
      * 返回以毫秒为单位的当前时间
@@ -191,5 +174,18 @@ public class SnowflakeIdWorker {
      */
     protected long timeGen() {
         return System.currentTimeMillis();
+    }
+
+    /**
+     * 测试
+     */
+    public static void main(String[] args) {
+
+        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 0);
+        for (int i = 0; i < 1000; i++) {
+            long id = idWorker.nextId();
+            System.out.println(Long.toBinaryString(id));
+            System.out.println(id);
+        }
     }
 }
