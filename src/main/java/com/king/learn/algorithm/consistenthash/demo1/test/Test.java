@@ -11,11 +11,11 @@ public class Test {
 
     public static void main(String[] args) {
         Map<String, Integer> map = new HashMap<>();// 每台真实机器节点上保存的记录条数
-        List<Node<String>> nodes = new ArrayList<Node<String>>();// 真实机器节点
+        List<Node<String>> nodes = new ArrayList<>();// 真实机器节点
         // 10台真实机器节点集群
         for (int i = 1; i <= 10; i++) {
             map.put(IP_PREFIX + i, 0);// 每台真实机器节点上保存的记录条数初始为0
-            Node<String> node = new Node<>(IP_PREFIX + i, "node" + i);
+            Node<String> node = new Node<String>(IP_PREFIX + i, "node" + i);
             nodes.add(node);
         }
         Hashing hashFunction = new MurmurHash(); // hash函数实例
@@ -28,7 +28,7 @@ public class Test {
             Node<String> node = consistentHash.get(data);
             // 再这里可以能过其它工具将记录存储真实机器节点上，比如MemoryCache等
             // 每台真实机器节点上保存的记录条数加1
-            map.put(node.getIp(), map.get(node.getIp()) + 1);
+            map.put(node.getIp(), map.get(node.toString()) + 1);
         }
 
         // 打印每台真实机器节点保存的记录条数

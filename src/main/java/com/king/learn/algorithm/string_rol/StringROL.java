@@ -18,9 +18,9 @@ public class StringROL {
     }
 
     /**
-     * @param from ÆğÊ¼Î»ÖÃ
-     * @param to   ½áÊøÎ»ÖÃ
-     *             <p>¹¦ÄÜ£º½«Êı×éµ¹ÖÃ(·´×ª)</p>
+     * @param from èµ·å§‹ä½ç½®
+     * @param to   ç»“æŸä½ç½®
+     *             <p>åŠŸèƒ½ï¼šå°†æ•°ç»„å€’ç½®(åè½¬)</p>
      */
     private void reverse(int from, int to) {
         while (from < to) {
@@ -31,8 +31,8 @@ public class StringROL {
     }
 
     /**
-     * @param m Ñ­»·×óÒÆmÎ»
-     * @return Ñ­»·×óÒÆºóµÄÊı×éch
+     * @param m å¾ªç¯å·¦ç§»mä½
+     * @return å¾ªç¯å·¦ç§»åçš„æ•°ç»„ch
      */
     public char[] ROL(int m) {
         int n = ch.length;

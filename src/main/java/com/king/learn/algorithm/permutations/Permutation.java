@@ -2,9 +2,9 @@ package com.king.learn.algorithm.permutations;
 
 /**
  * Created by king on 2017/6/2.
- * ÇóÈ«ÅÅÁĞ
+ * æ±‚å…¨æ’åˆ—
  * <p>
- * Àı£ºabcµÄÈ«ÅÅÁĞÊÇ  abc¡¢acb¡¢bac¡¢bca¡¢cba¡¢cab
+ * ä¾‹ï¼šabcçš„å…¨æ’åˆ—æ˜¯  abcã€acbã€bacã€bcaã€cbaã€cab
  */
 public class Permutation {
     private char[] ch;

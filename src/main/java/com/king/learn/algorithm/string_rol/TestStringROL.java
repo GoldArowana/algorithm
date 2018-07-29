@@ -3,7 +3,7 @@ package com.king.learn.algorithm.string_rol;
 /**
  * Created by king on 2017/6/2.
  * <p>
- * abcdef循环循环左移两位后cdefab
+ * abcdef寰幆寰幆宸︾Щ涓や綅鍚巆defab
  */
 public class TestStringROL {
     public static void main(String[] args) {

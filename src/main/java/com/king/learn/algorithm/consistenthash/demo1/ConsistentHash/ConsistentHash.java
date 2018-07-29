@@ -9,10 +9,9 @@ import java.util.TreeMap;
 public class ConsistentHash<T> {
     private final Hashing hash;
     private final int numberOfReplicas;
-    private final SortedMap<Long, T> circle = new TreeMap<Long, T>();
+    private final SortedMap<Long, T> circle = new TreeMap<>();
 
-    public ConsistentHash(Hashing hash, int numberOfReplicas,
-                          Collection<T> nodes) {
+    public ConsistentHash(Hashing hash, int numberOfReplicas, Collection<T> nodes) {
         super();
         this.hash = hash;
         this.numberOfReplicas = numberOfReplicas;

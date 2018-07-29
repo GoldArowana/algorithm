@@ -3,7 +3,7 @@ package com.king.learn.algorithm.trim;
 
 /**
  * Created by king on 2017/5/8.
- * ¹¦ÄÜ£ºÈ¥µôÖĞ¼äµÄ¿Õ¸ñ£¬±£ÁôÁ½±ßµÄ¿Õ¸ñ¡£
+ * åŠŸèƒ½ï¼šå»æ‰ä¸­é—´çš„ç©ºæ ¼ï¼Œä¿ç•™ä¸¤è¾¹çš„ç©ºæ ¼ã€‚
  */
 public class Trimid {
     public static void main(String[] args) {

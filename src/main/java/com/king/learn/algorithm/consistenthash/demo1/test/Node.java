@@ -1,27 +1,16 @@
 package com.king.learn.algorithm.consistenthash.demo1.test;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Node<T> {
     private String ip;// IP
     private String name;// 名称
 
     public Node(String ip, String name) {
         this.ip = ip;
-        this.name = name;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
     }
 
