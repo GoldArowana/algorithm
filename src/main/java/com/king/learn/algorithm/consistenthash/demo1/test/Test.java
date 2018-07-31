@@ -2,7 +2,7 @@ package com.king.learn.algorithm.consistenthash.demo1.test;
 
 import com.king.learn.algorithm.consistenthash.demo1.ConsistentHash.ConsistentHash;
 import com.king.learn.algorithm.consistenthash.demo1.base.Hashing;
-import com.king.learn.algorithm.consistenthash.demo1.base.MurmurHash;
+import com.king.learn.algorithm.consistenthash.demo1.ele.Node;
 
 import java.util.*;
 
@@ -15,10 +15,12 @@ public class Test {
         // 10台真实机器节点集群
         for (int i = 1; i <= 10; i++) {
             map.put(IP_PREFIX + i, 0);// 每台真实机器节点上保存的记录条数初始为0
-            Node<String> node = new Node<String>(IP_PREFIX + i, "node" + i);
-            nodes.add(node);
+            nodes.add(new Node<>(IP_PREFIX + i, "node" + i));
         }
-        Hashing hashFunction = new MurmurHash(); // hash函数实例
+//        Hashing hashFunction = new MurmurHash(); // hash函数实例
+        Hashing hashFunction = Hashing.MD5; // hash函数实例
+
+
         ConsistentHash<Node<String>> consistentHash = new ConsistentHash<>(hashFunction, 100, nodes);// 每台真实机器引入100个虚拟节点
         // 将5000条记录尽可能均匀的存储到10台机器节点
         for (int i = 0; i < 5000; i++) {

@@ -30,7 +30,8 @@ public interface Hashing {
         }
     };
 
-     long hash(String key);
-     long hash(byte[] key);
+    long hash(String key);
+
+    long hash(byte[] key);
 
 }
